@@ -1,0 +1,40 @@
+<div id="authModal" class="modal">
+  <div class="modal-content">
+    
+    <div id="signupBox">
+      <h2>Create Account</h2>
+      <input type="text" id="fName" placeholder="First Name">
+      <input type="text" id="lName" placeholder="Last Name">
+      <input type="email" id="sEmail" placeholder="Email">
+      <div class="phone-input">
+        <input type="text" id="countryCode" value="+91" style="width: 50px;">
+        <input type="text" id="phone" placeholder="10 Digit Number">
+      </div>
+      <input type="password" id="sPass" placeholder="Password">
+      <input type="password" id="sPassConfirm" placeholder="Confirm Password">
+      <button onclick="authAction('signup')">Sign Up</button>
+      <p>Already have an account? <span onclick="showBox('login')">Login</span></p>
+    </div>
+
+    <div id="loginBox" style="display:none;">
+      <h2>Login</h2>
+      <input type="email" id="lEmail" placeholder="Email">
+      <input type="password" id="lPass" placeholder="Password">
+      <button onclick="authAction('login')">Login</button>
+      <p><span onclick="showBox('forgot')">Forgot Password?</span></p>
+      <p>New user? <span onclick="showBox('signup')">Sign Up</span></p>
+    </div>
+
+    <div id="forgotBox" style="display:none;">
+      <h2>Reset Password</h2>
+      <input type="email" id="fEmail" placeholder="Enter Registered Email">
+      <button onclick="authAction('sendOTP')">Send OTP</button>
+      <div id="otpSection" style="display:none;">
+        <input type="text" id="otpInput" placeholder="Enter 6-Digit OTP">
+        <input type="password" id="newPass" placeholder="New Password">
+        <button onclick="authAction('reset')">Update Password</button>
+      </div>
+    </div>
+
+  </div>
+</div>
