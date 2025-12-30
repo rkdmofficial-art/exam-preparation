@@ -6,7 +6,7 @@ function showBox(box) {
 async function authAction(type) {
   // 1. Gather data based on type (Signup/Login)
   // 2. Fetch the Apps Script Web App URL
-  const SCRIPT_URL = "YOUR_DEPLOYED_WEB_APP_URL";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbygsfKjXMn1HxEXLP41MjWRg0linoOR3vqjUeR0wxJvF6XrzXfv-hnIO3108VTNkiaC/exec";
   
   // Example for Login
   if(type === 'login') {
