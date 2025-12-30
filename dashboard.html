@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body { padding: 30px; background: transparent; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .stat-card { background: var(--glass); padding: 25px; border-radius: 20px; border: 1px solid var(--border); backdrop-filter: blur(10px); }
+        .stat-card h3 { margin: 0; font-size: 0.9rem; color: #94a3b8; }
+        .stat-card p { font-size: 2rem; font-weight: 600; margin: 10px 0 0 0; color: var(--primary); }
+    </style>
+</head>
+<body>
+    <h1 id="welcomeText">Welcome back!</h1>
+    <div class="stats-grid">
+        <div class="stat-card"><h3>Days Left</h3><p>45</p></div>
+        <div class="stat-card"><h3>Topics Covered</h3><p>12/30</p></div>
+        <div class="stat-card"><h3>Mock Tests</h3><p>04</p></div>
+        <div class="stat-card"><h3>Next Exam</h3><p>Jan 15</p></div>
+    </div>
+    <script>
+        document.getElementById('welcomeText').innerText = "Hello, " + (localStorage.getItem('userName') || "Student") + "!";
+    </script>
+</body>
+</html>
