@@ -68,7 +68,7 @@ async function authAction(actionType) {
             if (actionType === 'login') {
                 localStorage.setItem('isLoggedIn', 'true');
                 localStorage.setItem('userName', result.firstName);
-                window.location.href = 'pages/dashboard.html';
+                window.location.href = 'pages/main.html';
             } else if (actionType === 'sendOTP') {
                 document.getElementById('step1').style.display = 'none';
                 document.getElementById('otpSection').style.display = 'block';
