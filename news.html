@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body { padding: 30px; background: transparent; }
+        .news-container { display: flex; flex-direction: column; gap: 20px; }
+        .news-card { background: var(--glass); padding: 20px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s; }
+        .news-card:hover { border-color: var(--primary); transform: translateX(10px); }
+        .tag { background: var(--primary); font-size: 0.7rem; padding: 4px 10px; border-radius: 20px; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+    <h2>Latest Updates</h2>
+    <div class="news-container">
+        <div class="news-card">
+            <span class="tag">Official</span>
+            <h3 style="margin: 10px 0;">New Exam Guidelines Released for 2026</h3>
+            <p style="color: #94a3b8; font-size: 0.9rem;">The board has announced changes to the marking scheme...</p>
+        </div>
+    </div>
+</body>
+</html>
