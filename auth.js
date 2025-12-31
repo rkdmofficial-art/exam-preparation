@@ -59,7 +59,9 @@ async function authAction(actionType) {
            or a library. However, for a professional setup, we use this 
            workaround to get the result:
         */
-        const resultResponse = await fetch(`${SCRIPT_URL}?action=checkStatus&email=${payload.email || ''}`);
+        const resultResponse = await fetch(
+  `${SCRIPT_URL}?action=checkStatus&email=${encodeURIComponent(payload.email || '')}`
+);
         let result;
 try {
     result = await resultResponse.json();
