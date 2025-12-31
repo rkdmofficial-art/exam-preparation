@@ -60,7 +60,12 @@ async function authAction(actionType) {
            workaround to get the result:
         */
         const resultResponse = await fetch(`${SCRIPT_URL}?action=checkStatus&email=${payload.email || ''}`);
-        const result = await resultResponse.json();
+        let result;
+try {
+    result = await resultResponse.json();
+} catch (err) {
+    throw new Error("Invalid JSON response from server");
+}
 
         loader.style.display = 'none';
 
